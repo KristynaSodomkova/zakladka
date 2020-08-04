@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Základka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Výukový portál pro žáky základních škol.">
+    <meta name="author" content="Kristyna Sodomkova">
+    <meta name="keywords" content="zdarma, učení, výuka, testy, základní škola, učitelka, český jazyk, čeština, matematika, matika, anglický jazyk, angličtina, přírodověda, vlastivěda, informatika, hudebka, hudební výchova, výtvarná výchova, výtvarka">
+  
+</head>
+
+
+<body>
+    <div class="wrapping">
+        <header class="header-main">
+            <a class="header-brand" href="">
+                Základka
+            </a>
+
+            <nav class="main-nav">
+
+                <!-- <button id="mainNavToggler" class="mainNav-toggler toggler-hamburger" type="button"> 
+                        <span class="main-nav-toggler-icon"></span>
+                    </button>-->
+
+                <button id="mainNavToggler" class="mainNav-toggler toggler-hamburger" type="submit">
+                        <span class="main-nav-toggler-icon"></span>
+                    </button>
+                
+                <ul id="navlist">
+                    <li>
+                        <a href="#">Předměty</a>
+                    </li>
+                    <li>
+                        <a href="#">Jak se tady učit</a>
+                    </li>
+                    <li>
+                        <a href="#">Registrace zdarma/ přihlášení</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <div class="section-one">
+
+                <h1>
+                    Základka CZ
+                </h1>
+                <div class="info">
+                    <p>Tyhle stránky, <br> Ti změní celou základku.</p>
+                    <div class="buttons">
+                        <p class="download-button"><a href="#">Stáhnout zdarma aplikaci</a></p>
+                        <p><a href="#">Více informací</a></p>
+
+                    </div>
+                </div>
+
+                <img class="phone" src="telefon.png" alt="telteljf">
+            </div>
+
+            <div class="section-two">
+
+                <div class="first-column">
+                    <p><img src="letadlo.svg" alt=""></p>
+                    <p>Nauč se to</p>
+                    <p> Vyber si předmět a ročník a začni s učením - nikoho k tomu nepotřebuješ, všechno zvládneš sám. Učit se můžeš pomocí osvědčeného systému otázka-odpověď a jednoduchých her. Najdeš zde i výpisky do sešitu, zkušební testy, vysvětlení látky pomocí videa a mnohé další.
+                </div>
+                    
+                <div class="second-column">
+                    <p><img src="bubliny.svg" alt=""></p>
+                    <p>Zaregistruj se
+                    <p> Registrace je zdarma a umožní Ti ukládat pokrok v předmětech. Sám uvidíš, kde se Ti daří a kde je třeba opakovat. Budeš si moci také vytvářet vlastní otázky a odpovědi, bude-li Tvá učitelka vyžadovat nějaké jiné znalosti.
+                </div>
+
+                <div class="third-column">
+                    <p><img src="mapa.svg" alt=""></p>
+                    <p>Pracuj v týmu
+                    <p> V týmu se to lépe táhne. Uč se rozdělit si práci s ostatními. Můžeš sdílet vytvořené sety otázek a odpovědí, můžeš porovnávat své úspěchy v jednotlivých testech a hrách, můžeš používat materiály od svých spolužáků.
+                </div>
+                
+            </div>
+        </main>
+
+
+        <footer>
+            <span class="footer-copy">
+                &copy; 2020, Kristyna Sodomkova
+            </span>
+
+        </footer>
+    </div>
+
+    <script>
+        (function () {
+            let mainNavToggler = document.querySelector('#mainNavToggler')
+            let navlist = document.querySelector('#navlist')
+
+            mainNavToggler.addEventListener('click', function (e){
+                navlist.classList.toggle('menu-show')
+
+                console.log('navbar display', getComputedStyle(navlist).display)
+
+                e.stopPropagation()
+            })
+
+            document.addEventListener('click', function () {
+
+                navlist.classList.remove('menu-show')
+            })
+
+            document.addEventListener('keydown', function (e) {
+                if (e.keyCode === 27) {
+                    // Handle escape on page by hiding the menu
+                    navlist.classList.remove('menu-show')
+                }
+            })
+
+
+        })()
+
+
+    </script>
+</body>
+
+</html>
